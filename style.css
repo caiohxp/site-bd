@@ -1,3 +1,5 @@
+@import url('estilos/agencia.css');
+
 @font-face {
   font-family: 'LiteOn-Thin';
   src: url('fontes bd/LiteOn-Thin.otf') format('opentype');
@@ -14,6 +16,7 @@ body {
   font-family: 'Helvetica Neue', sans-serif;
   background-color: #fff;
   color: #111;
+  font-family: 'LiteOn-Thin', sans-serif;
 }
 
 .header {
@@ -35,21 +38,37 @@ body {
   font-weight: bold;
   font-size: 2rem;
   margin-right: 10px;
+  width: 40px;
+  height: 40px;
 }
 
+.logo-text{
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: -10px;
+}
 
+.logo-text2{
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
 
 .nav-menu a {
   margin: 0 10px;
   text-decoration: none;
   color: #111;
   font-weight: 300;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   position: relative;
 }
 
 .nav-menu a:hover {
   text-decoration: underline;
+}
+
+.hero{
+  padding-bottom: 20px;
 }
 
 .hero-image {
@@ -110,21 +129,34 @@ body {
 
 .slogan-section {
   text-align: center;
-  padding: 40px;
+  padding: 20px 50px;
+  border: 1px solid;
+  border-color: #4c4c4c transparent;
 }
 
 .slogan-section p {
-  font-size: 1.1rem;
-  margin-bottom: 30px;
+  font-size: 1.3rem;
   color: #444;
+  margin: 0px;
 }
 
 .divider {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 30px;
-  margin-bottom: 20px;
+  width: 100%;
+}
+
+.styled-line {
+  border: none;
+  border-top: 2px solid black;
+  height: 2px;
+  background: linear-gradient(to right, black 20%, transparent 40%, black 60%, transparent 80%);
+  background-size: 50px 2px;
+  background-repeat: repeat-x;
+  margin: 10px 0;
+  width: 30%;
 }
 
 .wave {
@@ -137,9 +169,10 @@ body {
 .contact-button {
   border: 1px solid #aaa;
   background: transparent;
-  padding: 10px 20px;
-  font-size: 0.9rem;
+  padding: 5px 40px;
+  font-size: 1.2rem;
   cursor: pointer;
+  border-radius: 50px;
 }
 
 .contact-button:hover {
@@ -150,21 +183,25 @@ body {
 
 .socials {
   margin-top: 10px;
-}
-
-.socials a {
-  margin: 0 10px;
-  font-size: 0.85rem;
-  text-decoration: none;
-  color: #555;
   border: 1px solid #ccc;
-  padding: 6px 12px;
+  padding: 0px 0px;
   border-radius: 20px;
 }
 
+.socials a {
+  font-size: 0.7rem;
+  text-decoration: none;
+  color: #555;
+  width: 100%;
+}
+
+.socials a:nth-child(2){
+  border: 1px solid;
+  border-color: transparent #4c4c4d;
+}
+
 .socials a:hover {
-  background-color: #000;
-  color: #fff;
+  text-decoration: underline;
 }
 
 
