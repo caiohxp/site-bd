@@ -1,4 +1,5 @@
 @import url('estilos/agencia.css');
+@import url('estilos/archdesign.css');
 
 @font-face {
   font-family: 'LiteOn-Thin';
@@ -13,7 +14,6 @@
 }
 
 body {
-  font-family: 'Helvetica Neue', sans-serif;
   background-color: #fff;
   color: #111;
   font-family: 'LiteOn-Thin', sans-serif;
@@ -24,7 +24,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #4c4c4c;
 }
 
 .logo {

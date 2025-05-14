@@ -1,18 +1,25 @@
 const carousel = document.querySelector('#carouselHero');
 const animatedTexts = document.querySelectorAll('.animated-text');
+let typingTimeouts = []; // Array para armazenar os timeouts ativos
 
 carousel.addEventListener('slid.bs.carousel', () => {
-    animatedTexts.forEach((text) => {
-        const content = text.textContent; // Captura o texto original
+    const arrayContent = ['Agência', 'Arch & Design', 'Immersive 3D', 'Film Studio'];
+
+    // Limpa todos os timeouts ativos antes de iniciar novos
+    typingTimeouts.forEach(timeout => clearTimeout(timeout));
+    typingTimeouts = []; // Reseta o array de timeouts
+
+    animatedTexts.forEach((text, i) => {
         text.textContent = ''; // Limpa o texto
         let index = 0;
 
         // Função para simular o efeito de digitação
         const typeEffect = () => {
-            if (index < content.length) {
-                text.textContent += content[index];
+            if (index < arrayContent[i].length) {
+                text.textContent += arrayContent[i][index];
                 index++;
-                setTimeout(typeEffect, 100); // Ajuste o tempo para controlar a velocidade
+                const timeout = setTimeout(typeEffect, 100); // Ajuste o tempo para controlar a velocidade
+                typingTimeouts.push(timeout); // Armazena o timeout
             }
         };
 
